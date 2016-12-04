@@ -4,6 +4,37 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+    <string name="what_is_URG">1. What is UR Global?</string>
+    <string name="what_is_URG_msg">UR Global is University Residences program for first-year international students who live on campus. Our program connects them to on-campus resources and organize free events throughout the semester. </string>
+    <string name="what_is_URG_mission">Our mission is to help first-year international students transition from their home culture to the American way of life through: </string>
+    <string name="bullet1"> Social and educational events throughout the year </string>
+    <string name="bullet2"> Offer unique opportunities to make new friends </string>
+    <string name="bullet3"> Connect them to Purdue resources </string>
+
+    <string name="what_is_pes">2. What is a Peer Educator?</string>
+    <string name="what_is_pes_msg">Peer Educators are the mentors and leaders in UR Global. In order to qualify, they must study at Purdue for at least one semester and maintain a minimum of  a 2.5 GPA.</string>
+    <string name="pes_expect">Peer Educators are expected to:</string>
+    <string name="pes_req1"> Participate in UR Global events and mentor new international students </string>
+    <string name="pes_req2"> Undergo a leadership training program </string>
+
+    <string name="what_are_benefits">3. What are the benefits?</string>
+    <string name="benefit1">Develop leadership skills</string>
+    <string name="benefit2">Opportunity to meet Purdue administrator</string>
+    <string name="benefit3">Free attendance to all UR Global events</string>
+    <string name="benefit4">Opportunities to connect with Purdue alumni</string>
+    <string name="benefit5">Develop your skills set and strengthen your resume</string>
+    <string name="benefit6">Gain cross-cultural skills</string>
+    <string name="benefit7">Make new friends and get the most of our your Purdue experience!</string>
+
+    <string name="our_stories">4. Our Stories?</string>
+    <string name="our_stories_msg">Past and current Peer Educators have gone on to do amazing things at Purdue. Some examples include:</string>
+    <string name="example1">Acceptance into professional programs;</string>
+    <string name="example2">Summer internships;</string>
+    <string name="example3">Study Abroad programs;</string>
+    <string name="example4">Jobs, including Resident Assistant (R.A.)</string>
+    <string name="example5">BGR/BGRi Leaders</string>
+
+
     <string name="action_settings">Settings</string>
 
     <string name="menu_about">About</string>
