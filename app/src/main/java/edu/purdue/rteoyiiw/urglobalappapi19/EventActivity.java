@@ -28,6 +28,8 @@ public class EventActivity extends AppCompatActivity
         setContentView(R.layout.activity_event);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        addListenerEvent1Button();
+        addListenerEvent2Button();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -36,7 +38,6 @@ public class EventActivity extends AppCompatActivity
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        View headerView = navigationView.getHeaderView(0);
         navigationView.setNavigationItemSelectedListener(this);
         addListenerBannerButton();
     }
@@ -106,7 +107,7 @@ public class EventActivity extends AppCompatActivity
         });
     }
 
-    public void addListenerAboutButton() {
+    public void addListenerEvent1Button() {
         Button button;
         button = (Button) findViewById(R.id.event1);
 
@@ -121,7 +122,7 @@ public class EventActivity extends AppCompatActivity
     }
 
 
-    public void addListenerEventButton(){
+    public void addListenerEvent2Button(){
         Button button;
         button = (Button)findViewById(R.id.event2);
 
