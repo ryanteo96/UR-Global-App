@@ -92,6 +92,10 @@ public class MainActivity extends AppCompatActivity
         }else if(id == R.id.event){
             Intent intent = new Intent(MainActivity.this, EventActivity.class);
             startActivity(intent);
+        }else if(id == R.id.regi) {
+            Uri uriUrl = Uri.parse("https://purdue.qualtrics.com/jfe/form/SV_0vmpUY9NjfmsXat");
+            Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+            startActivity(launchBrowser);
         }
 
 
@@ -127,4 +131,5 @@ public class MainActivity extends AppCompatActivity
             }
         });
     }
+
 }
