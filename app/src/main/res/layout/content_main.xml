@@ -17,10 +17,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:id="@+id/content_main_layout"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/content_main_layout">
+        android:layout_alignParentStart="true">
 
         <Button
             android:background="@drawable/about_button_background"
@@ -30,5 +30,14 @@
             android:layout_height="150dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/eventButton"
+            android:layout_width="350dp"
+            android:layout_height="150dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
     </RelativeLayout>
 </RelativeLayout>

@@ -8,4 +8,6 @@
 
     <string name="menu_about">About</string>
 
+    <string name="menu_event">Upcoming Events</string>
+
 </resources>

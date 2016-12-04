@@ -1,6 +1,5 @@
 package edu.purdue.rteoyiiw.urglobalappapi19;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -11,18 +10,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity
+/**
+ * Created by LeyYen on 12/4/2016.
+ */
+
+
+public class EventActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        addListenerAboutButton();
-        addListenerEventButton();
+        setContentView(R.layout.activity_event);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -37,6 +36,13 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -44,13 +50,6 @@ public class MainActivity extends AppCompatActivity
         } else {
             super.onBackPressed();
         }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
     }
 
     @Override
@@ -68,21 +67,15 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.about) {
+        if (id == R.id.event) {
             // Handle the camera action
-            Intent intent = new Intent(MainActivity.this, AboutActivity.class);
-            startActivity(intent);
-        }
-
-        if(id == R.id.event){
-            Intent intent = new Intent(MainActivity.this, EventActivity.class);
-            startActivity(intent);
         }
 
 
@@ -90,32 +83,6 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-    public void addListenerAboutButton() {
-        Button button;
-        button = (Button) findViewById(R.id.aboutButton);
-
-        button.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                Intent intent = new Intent(MainActivity.this, AboutActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
-
-    public void addListenerEventButton(){
-        Button button;
-        button = (Button)findViewById(R.id.eventButton);
-
-        button.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View arg0){
-                Intent intent = new Intent(MainActivity.this, EventActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
 }
+
+

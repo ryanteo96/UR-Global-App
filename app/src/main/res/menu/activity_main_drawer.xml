@@ -6,4 +6,11 @@
             android:id="@+id/about"
             android:title="@string/menu_about" />
     </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/event"
+            android:title="Upcoming Events"/>
+    </group>
+
 </menu>
