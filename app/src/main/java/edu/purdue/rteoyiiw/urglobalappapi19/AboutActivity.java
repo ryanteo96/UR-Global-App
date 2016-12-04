@@ -1,5 +1,6 @@
 package edu.purdue.rteoyiiw.urglobalappapi19;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -69,8 +70,10 @@ public class AboutActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.about) {
+        if (id == R.id.event) {
             // Handle the camera action
+            Intent intent = new Intent(AboutActivity.this, EventActivity.class);
+            startActivity(intent);
         }
 
 

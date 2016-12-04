@@ -78,9 +78,7 @@ public class MainActivity extends AppCompatActivity
             // Handle the camera action
             Intent intent = new Intent(MainActivity.this, AboutActivity.class);
             startActivity(intent);
-        }
-
-        if(id == R.id.event){
+        }else if(id == R.id.event){
             Intent intent = new Intent(MainActivity.this, EventActivity.class);
             startActivity(intent);
         }

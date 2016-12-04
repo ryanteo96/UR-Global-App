@@ -5,12 +5,10 @@
         <item
             android:id="@+id/about"
             android:title="@string/menu_about" />
-    </group>
 
-    <group android:checkableBehavior="single">
         <item
             android:id="@+id/event"
-            android:title="Upcoming Events"/>
+            android:title="@string/menu_event"/>
     </group>
 
 </menu>
