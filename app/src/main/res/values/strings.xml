@@ -34,6 +34,12 @@
     <string name="example4">Jobs, including Resident Assistant (R.A.)</string>
     <string name="example5">BGR/BGRi Leaders</string>
 
+    <string name = "EventTitle1">Event Title 1</string>
+    <string name = "EventTitle2">Event Title 2</string>
+
+    <string name = "description">BLA BLA BLA BLA BLA BLA BLA</string>
+    <string name = "description2">BLO BLO BLO BLO BLO BLO BLO</string>
+
 
     <string name="action_settings">Settings</string>
 

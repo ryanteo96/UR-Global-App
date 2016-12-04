@@ -13,8 +13,18 @@
     tools:context="edu.purdue.rteoyiiw.urglobalappapi19.EventActivity"
     tools:showIn="@layout/app_bar_event">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello The Other World!" />
+    <Button
+        android:text="Event Title 1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/event1" />
+
+    <Button
+        android:text="Event Title 2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/event2"
+        android:layout_below="@+id/event1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

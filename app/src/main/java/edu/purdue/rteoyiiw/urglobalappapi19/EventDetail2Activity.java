@@ -13,19 +13,18 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 
 /**
  * Created by LeyYen on 12/4/2016.
  */
 
-
-public class EventActivity extends AppCompatActivity
+public class EventDetail2Activity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_event);
+        setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -36,16 +35,7 @@ public class EventActivity extends AppCompatActivity
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        View headerView = navigationView.getHeaderView(0);
         navigationView.setNavigationItemSelectedListener(this);
-        addListenerBannerButton();
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
     }
 
     @Override
@@ -56,6 +46,13 @@ public class EventActivity extends AppCompatActivity
         } else {
             super.onBackPressed();
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
     }
 
     @Override
@@ -73,7 +70,6 @@ public class EventActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -82,7 +78,10 @@ public class EventActivity extends AppCompatActivity
 
         if (id == R.id.about) {
             // Handle the camera action
-            Intent intent = new Intent(EventActivity.this, AboutActivity.class);
+            Intent intent = new Intent(EventDetail2Activity.this, AboutActivity.class);
+            startActivity(intent);
+        }else if(id == R.id.event){
+            Intent intent = new Intent(EventDetail2Activity.this, EventActivity.class);
             startActivity(intent);
         }
 
@@ -92,48 +91,4 @@ public class EventActivity extends AppCompatActivity
         return true;
     }
 
-    public void addListenerBannerButton(){
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        View headerView = navigationView.getHeaderView(0);
-        LinearLayout header = (LinearLayout) headerView.findViewById(R.id.banner_button);
-        header.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View arg0) {
-                Intent intent = new Intent(EventActivity.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
-    }
-
-    public void addListenerAboutButton() {
-        Button button;
-        button = (Button) findViewById(R.id.event1);
-
-        button.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                Intent intent = new Intent(EventActivity.this, EventDetail1Activity.class);
-                startActivity(intent);
-            }
-        });
-    }
-
-
-    public void addListenerEventButton(){
-        Button button;
-        button = (Button)findViewById(R.id.event2);
-
-        button.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View arg0){
-                Intent intent = new Intent(EventActivity.this, EventDetail2Activity.class);
-                startActivity(intent);
-            }
-        });
-    }
 }
-
-
