@@ -262,6 +262,25 @@
                 android:layout_marginTop="2dp">
             </TextView>
 
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/more_info"
+                android:textSize="15sp"
+                android:textStyle="normal|bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp">
+            </TextView>
+
+            <Button
+                android:id="@+id/fbHL"
+                android:onClick="goToFacebook"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:background="@drawable/ur_global"
+                android:layout_gravity="center_horizontal"/>
+
         </LinearLayout>
 
     </ScrollView>

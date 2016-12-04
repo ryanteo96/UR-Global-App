@@ -1,6 +1,7 @@
 package edu.purdue.rteoyiiw.urglobalappapi19;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -33,6 +34,16 @@ public class AboutActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         addListenerBannerButton();
+    }
+
+    public void goToFacebook (View view) {
+        goToUrl("https://www.facebook.com/URGlobal/");
+    }
+
+    private void goToUrl (String url) {
+        Uri uriUrl = Uri.parse(url);
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+        startActivity(launchBrowser);
     }
 
     @Override
