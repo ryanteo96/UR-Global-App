@@ -14,30 +14,39 @@
     tools:context="edu.purdue.rteoyiiw.urglobalappapi19.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/content_main_layout"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_height="match_parent">
 
-        <Button
-            android:background="@drawable/about_button_background"
-            android:layout_marginTop="11dp"
-            android:id="@+id/aboutButton"
-            android:layout_width="350dp"
-            android:layout_height="150dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/content_main_layout">
 
-        <Button
-            android:id="@+id/eventButton"
-            android:layout_width="350dp"
-            android:layout_height="150dp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
 
-    </RelativeLayout>
+            <Button
+                android:background="@drawable/about_button_background"
+                android:layout_marginTop="10dp"
+                android:id="@+id/aboutButton"
+                android:layout_width="350dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:id="@+id/eventButton"
+                android:layout_width="350dp"
+                android:layout_height="150dp"
+                android:layout_below="@+id/aboutButton"
+                android:layout_marginTop="10dp" />
+
+            <Button
+                android:id="@+id/regiButton"
+                android:onClick="goToQualtric"
+                android:layout_width="350dp"
+                android:layout_height="150dp"
+                android:layout_below="@+id/eventButton"
+                android:layout_marginTop="10dp" />
+
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>
