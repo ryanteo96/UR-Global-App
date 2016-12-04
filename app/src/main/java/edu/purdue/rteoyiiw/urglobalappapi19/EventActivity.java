@@ -1,6 +1,7 @@
 package edu.purdue.rteoyiiw.urglobalappapi19;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -85,6 +86,10 @@ public class EventActivity extends AppCompatActivity
             // Handle the camera action
             Intent intent = new Intent(EventActivity.this, AboutActivity.class);
             startActivity(intent);
+        }else if(id == R.id.regi) {
+            Uri uriUrl = Uri.parse("https://purdue.qualtrics.com/jfe/form/SV_0vmpUY9NjfmsXat");
+            Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+            startActivity(launchBrowser);
         }
 
 
