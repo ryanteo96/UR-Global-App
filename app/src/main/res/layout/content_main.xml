@@ -33,6 +33,7 @@
                 android:layout_centerHorizontal="true" />
 
             <Button
+                android:background="@drawable/event_button_background"
                 android:id="@+id/eventButton"
                 android:layout_width="350dp"
                 android:layout_height="150dp"
@@ -40,6 +41,7 @@
                 android:layout_marginTop="10dp" />
 
             <Button
+                android:background="@drawable/register_button_background"
                 android:id="@+id/regiButton"
                 android:onClick="goToQualtric"
                 android:layout_width="350dp"
