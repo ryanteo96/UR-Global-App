@@ -44,7 +44,7 @@
 
         <activity
             android:name=".EventDetail2Activity"
-            android:label="Event 1"
+            android:label="Event 2"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
