@@ -16,26 +16,83 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-        <TextView
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="276dp"
+                app:srcCompat="@drawable/sixflag5"
+                android:id="@+id/imageView5" />
+
+            <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/EventTitle1"
             android:textSize="17sp"
             android:textStyle="normal|bold"
-            android:id="@+id/event1title" />
+            android:id="@+id/sixflag"
+            android:layout_marginTop="5dp"
+            android:textColor="#000000"/>
 
-        <TextView
+            <TextView
             android:text="@string/description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/description" />
+            android:id="@+id/date"
+            android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:text="@string/description_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/description_sixflag"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:text="@string/description_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@id/description_sixflag"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:text="@string/description_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@id/description_sixflag"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:text="@string/description_d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@id/description_sixflag"
+                android:layout_marginTop="5dp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="305dp"
+                app:srcCompat="@drawable/sixflag2"
+                android:id="@+id/imageView6" />
+
+
+
+            <TextView
+                android:text="@string/description_e"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/awesome"
+                android:textSize="50sp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
 
         </LinearLayout>
     </ScrollView>
