@@ -56,11 +56,11 @@ public class MainActivity extends AppCompatActivity
     private void addNotification() {
         NotificationCompat.Builder builder =
                 new NotificationCompat.Builder(this)
-                        .setSmallIcon(R.drawable.ic_launcher)
+                        .setSmallIcon(R.drawable.sample_event_noti)
                         .setContentTitle("Purdue After Dark Presents! STRESS FREE FRIDAY")
                         .setContentText("Free food, Arts & Crafts, Massages and so much more! Dec. 9th. 8 - 12 A.M");
 
-        Intent notificationIntent = new Intent(this, MainActivity.class);
+        Intent notificationIntent = new Intent(this, EventActivity.class);
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
         builder.setContentIntent(contentIntent);
