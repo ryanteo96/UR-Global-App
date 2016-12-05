@@ -20,7 +20,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/content_main_layout">
 
 
@@ -38,7 +38,8 @@
                 android:layout_width="350dp"
                 android:layout_height="150dp"
                 android:layout_below="@+id/aboutButton"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true" />
 
             <Button
                 android:background="@drawable/register_button_background"
@@ -47,15 +48,17 @@
                 android:layout_width="350dp"
                 android:layout_height="150dp"
                 android:layout_below="@+id/eventButton"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true" />
 
             <Button
-                android:text="Notification Demo"
+                android:text="@string/notification_demo"
                 android:id="@+id/notiDemo"
                 android:layout_width="350dp"
                 android:layout_height="50dp"
                 android:layout_below="@+id/regiButton"
-                android:layout_marginTop="20dp" />
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true" />
 
         </RelativeLayout>
     </ScrollView>

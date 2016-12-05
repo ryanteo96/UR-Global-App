@@ -49,4 +49,6 @@
 
     <string name="menu_event">Upcoming Events</string>
 
+    <string name="notification_demo">Notification Demo</string>
+
 </resources>
