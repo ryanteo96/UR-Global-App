@@ -18,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity
         addListenerAboutButton();
         addListenerEventButton();
         addListenerNotiDemo();
+        addListenerRegisterButton();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -41,16 +43,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-    }
-
-    public void goToQualtric (View view) {
-        goToUrl("https://purdue.qualtrics.com/jfe/form/SV_0vmpUY9NjfmsXat");
-    }
-
-    private void goToUrl (String url) {
-        Uri uriUrl = Uri.parse(url);
-        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
-        startActivity(launchBrowser);
+        addListenerUpcomingEventLayout();
     }
 
     private void addNotification() {
@@ -96,7 +89,8 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
@@ -116,9 +110,8 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(MainActivity.this, EventActivity.class);
             startActivity(intent);
         }else if(id == R.id.regi) {
-            Uri uriUrl = Uri.parse("https://purdue.qualtrics.com/jfe/form/SV_0vmpUY9NjfmsXat");
-            Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
-            startActivity(launchBrowser);
+            Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+            startActivity(intent);
         }
 
 
@@ -154,6 +147,20 @@ public class MainActivity extends AppCompatActivity
             }
         });
     }
+
+    public void addListenerRegisterButton(){
+        Button button;
+        button = (Button)findViewById(R.id.regiButton);
+
+        button.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View arg0){
+                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
     public void addListenerNotiDemo(){
         Button button;
         button = (Button)findViewById(R.id.notiDemo);
@@ -163,6 +170,18 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View arg0) {
                 addNotification();
+            }
+        });
+    }
+
+    public void addListenerUpcomingEventLayout(){
+        LinearLayout header = (LinearLayout) findViewById(R.id.upcoming_event);
+        header.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(MainActivity.this, EventDetail1Activity.class);
+                startActivity(intent);
             }
         });
     }

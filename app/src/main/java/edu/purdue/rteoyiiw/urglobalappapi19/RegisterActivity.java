@@ -16,19 +16,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
-/**
- * Created by LeyYen on 12/4/2016.
- */
+public class RegisterActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
 
-public class EventDetail1Activity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener{
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_event1);
+        setContentView(R.layout.activity_register);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        addListenerEvent1Button();
+        addListenerEvent2Button();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -42,6 +39,13 @@ public class EventDetail1Activity extends AppCompatActivity
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
@@ -49,13 +53,6 @@ public class EventDetail1Activity extends AppCompatActivity
         } else {
             super.onBackPressed();
         }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
     }
 
     @Override
@@ -73,6 +70,7 @@ public class EventDetail1Activity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -81,13 +79,10 @@ public class EventDetail1Activity extends AppCompatActivity
 
         if (id == R.id.about) {
             // Handle the camera action
-            Intent intent = new Intent(EventDetail1Activity.this, AboutActivity.class);
+            Intent intent = new Intent(RegisterActivity.this, AboutActivity.class);
             startActivity(intent);
-        }else if(id == R.id.event){
-            Intent intent = new Intent(EventDetail1Activity.this, EventActivity.class);
-            startActivity(intent);
-        }else if(id == R.id.regi) {
-            Intent intent = new Intent(EventDetail1Activity.this, RegisterActivity.class);
+        }else if(id == R.id.event) {
+            Intent intent = new Intent(RegisterActivity.this, EventActivity.class);
             startActivity(intent);
         }
 
@@ -105,10 +100,40 @@ public class EventDetail1Activity extends AppCompatActivity
         {
             @Override
             public void onClick(View arg0) {
-                Intent intent = new Intent(EventDetail1Activity.this, MainActivity.class);
+                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
     }
 
+    public void addListenerEvent1Button() {
+        Button button;
+        button = (Button) findViewById(R.id.event1);
+
+        button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                Intent intent = new Intent(RegisterActivity.this, EventDetail1Activity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+
+    public void addListenerEvent2Button(){
+        Button button;
+        button = (Button)findViewById(R.id.event2);
+
+        button.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View arg0){
+                Intent intent = new Intent(RegisterActivity.this, EventDetail2Activity.class);
+                startActivity(intent);
+            }
+        });
+    }
 }
+
+

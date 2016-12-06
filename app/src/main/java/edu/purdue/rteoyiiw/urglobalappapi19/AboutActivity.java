@@ -89,9 +89,8 @@ public class AboutActivity extends AppCompatActivity
             Intent intent = new Intent(AboutActivity.this, EventActivity.class);
             startActivity(intent);
         } else if(id == R.id.regi) {
-            Uri uriUrl = Uri.parse("https://purdue.qualtrics.com/jfe/form/SV_0vmpUY9NjfmsXat");
-            Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
-            startActivity(launchBrowser);
+            Intent intent = new Intent(AboutActivity.this, RegisterActivity.class);
+            startActivity(intent);
         }
 
 
