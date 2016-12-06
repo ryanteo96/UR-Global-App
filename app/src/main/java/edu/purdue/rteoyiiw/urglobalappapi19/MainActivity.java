@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
+        drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -49,9 +49,9 @@ public class MainActivity extends AppCompatActivity
     private void addNotification() {
         NotificationCompat.Builder builder =
                 new NotificationCompat.Builder(this)
-                        .setSmallIcon(R.drawable.sample_event_noti)
-                        .setContentTitle("Purdue After Dark Presents! STRESS FREE FRIDAY")
-                        .setContentText("Free food, Arts & Crafts, Massages and so much more! Dec. 9th. 8 - 12 A.M");
+                        .setSmallIcon(R.drawable.sample_notification)
+                        .setContentTitle("UR Global Ski Trip!")
+                        .setContentText("Make the most out of winter by learning how to ski. Feb. 11th. Saturday");
 
         Intent notificationIntent = new Intent(this, EventActivity.class);
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent,
