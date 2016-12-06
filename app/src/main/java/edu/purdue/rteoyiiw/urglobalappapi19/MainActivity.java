@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity
                         .setContentTitle("UR Global Ski Trip!")
                         .setContentText("Make the most out of winter by learning how to ski. Feb. 11th. Saturday");
 
-        Intent notificationIntent = new Intent(this, EventActivity.class);
+        Intent notificationIntent = new Intent(this, EventDetail1Activity.class);
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
         builder.setContentIntent(contentIntent);

@@ -24,18 +24,18 @@ public class RegisterActivity extends AppCompatActivity
         setContentView(R.layout.activity_register);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        addListenerEvent1Button();
-        addListenerEvent2Button();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
+        drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         addListenerBannerButton();
+        addListenerRegisterEventButton();
+        addListenerRegisterPeerButton();
     }
 
     @Override
@@ -106,31 +106,32 @@ public class RegisterActivity extends AppCompatActivity
         });
     }
 
-    public void addListenerEvent1Button() {
+    public void addListenerRegisterEventButton(){
         Button button;
-        button = (Button) findViewById(R.id.event1);
-
-        button.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                Intent intent = new Intent(RegisterActivity.this, EventDetail1Activity.class);
-                startActivity(intent);
-            }
-        });
-    }
-
-
-    public void addListenerEvent2Button(){
-        Button button;
-        button = (Button)findViewById(R.id.event2);
+        button = (Button)findViewById(R.id.register_event_button);
 
         button.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View arg0){
-                Intent intent = new Intent(RegisterActivity.this, EventDetail2Activity.class);
-                startActivity(intent);
+                Uri uriUrl = Uri.parse("https://purdue.qualtrics.com/jfe/form/SV_0vmpUY9NjfmsXat");
+                Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+                startActivity(launchBrowser);
+            }
+        });
+    }
+
+    public void addListenerRegisterPeerButton(){
+        Button button;
+        button = (Button)findViewById(R.id.register_peer_button);
+
+        button.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View arg0){
+                Uri uriUrl = Uri.parse("https://purdue.qualtrics.com/SE/?SID=SV_86q6QLact0g4Hjv");
+                Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+                startActivity(launchBrowser);
             }
         });
     }
