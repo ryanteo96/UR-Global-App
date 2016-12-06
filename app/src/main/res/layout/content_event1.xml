@@ -13,12 +13,9 @@
     tools:context="edu.purdue.rteoyiiw.urglobalappapi19.EventDetail1Activity"
     tools:showIn="@layout/app_bar_event1">
 
-
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,72 +24,73 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="276dp"
-                app:srcCompat="@drawable/sixflag5"
-                android:id="@+id/imageView5" />
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ice_skating_banner"
+                android:id="@+id/imageView11"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:adjustViewBounds="true"/>
 
             <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/EventTitle1"
-            android:textSize="17sp"
-            android:textStyle="normal|bold"
-            android:id="@+id/sixflag"
-            android:layout_marginTop="5dp"
-            android:textColor="#000000"/>
-
-            <TextView
-            android:text="@string/description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/date"
-            android:layout_marginTop="5dp"/>
-
-            <TextView
-                android:text="@string/description_a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/description_sixflag"
+                android:text="@string/EventTitle1"
+                android:textStyle="normal|bold"
+                android:textColor="#000000"
+                android:textSize="20sp"
+
+                android:id="@+id/event1title" />
+
+            <TextView
+                android:id="@+id/game_description_1"
+                android:text="@string/Global_desp1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/game_description_2"
+                android:text="@string/Global_desp2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/game_description_3"
+                android:text="@string/Global_desp3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"/>
 
             <TextView
-                android:text="@string/description_b"
+                android:id="@+id/event_description_4"
+                android:text="@string/Global_desp4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@id/description_sixflag"
                 android:layout_marginTop="5dp"/>
 
             <TextView
-                android:text="@string/description_c"
+                android:id="@+id/event_description_5"
+                android:text="@string/Global_desp5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@id/description_sixflag"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginTop="10dp"/>
 
             <TextView
-                android:text="@string/description_d"
+                android:id="@+id/event_description_6"
+                android:text="@string/Global_desp6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@id/description_sixflag"
-                android:layout_marginTop="5dp"/>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="305dp"
-                app:srcCompat="@drawable/sixflag2"
-                android:id="@+id/imageView6" />
-
-
+                android:layout_marginTop="10dp"/>
 
             <TextView
-                android:text="@string/description_e"
+                android:id="@+id/linktoregister"
+                android:autoLink="web"
+                android:linksClickable="true"
+                android:text="@string/link"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/awesome"
-                android:textSize="50sp"
-                android:textAlignment="center"
-                android:textStyle="bold"
-                android:textColor="#000000"/>
+                android:layout_marginTop="10dp"/>
 
         </LinearLayout>
     </ScrollView>
