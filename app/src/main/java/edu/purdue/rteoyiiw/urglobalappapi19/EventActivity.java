@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 public class EventActivity extends AppCompatActivity
@@ -24,8 +25,6 @@ public class EventActivity extends AppCompatActivity
         setContentView(R.layout.activity_event);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        addListenerEvent1Button();
-        addListenerEvent2Button();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -36,6 +35,8 @@ public class EventActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         addListenerBannerButton();
+        addListenerEvent1();
+        addListenerEvent2();
     }
 
     @Override
@@ -106,26 +107,25 @@ public class EventActivity extends AppCompatActivity
         });
     }
 
-    public void addListenerEvent1Button() {
-        Button button;
-        button = (Button) findViewById(R.id.event1);
+    public void addListenerEvent1(){
 
-        button.setOnClickListener(new View.OnClickListener() {
+        ImageView image = (ImageView)findViewById(R.id.event_1);
+
+        image.setOnClickListener(new View.OnClickListener(){
 
             @Override
-            public void onClick(View arg0) {
+            public void onClick(View arg0){
                 Intent intent = new Intent(EventActivity.this, EventDetail1Activity.class);
                 startActivity(intent);
             }
         });
     }
 
+    public void addListenerEvent2(){
 
-    public void addListenerEvent2Button(){
-        Button button;
-        button = (Button)findViewById(R.id.event2);
+        ImageView image = (ImageView)findViewById(R.id.event_2);
 
-        button.setOnClickListener(new View.OnClickListener(){
+        image.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View arg0){
