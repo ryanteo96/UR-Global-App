@@ -83,6 +83,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"/>
 
+            <ImageView
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/sign_up_button"
+                android:id="@+id/sign_up_button"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:layout_width="match_parent" />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

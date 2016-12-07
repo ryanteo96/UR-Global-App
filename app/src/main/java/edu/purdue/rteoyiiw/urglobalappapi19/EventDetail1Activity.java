@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 public class EventDetail1Activity extends AppCompatActivity
@@ -35,6 +36,7 @@ public class EventDetail1Activity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         addListenerBannerButton();
+        addListenerSignupButton();
     }
 
     @Override
@@ -103,6 +105,20 @@ public class EventDetail1Activity extends AppCompatActivity
             public void onClick(View arg0) {
                 Intent intent = new Intent(EventDetail1Activity.this, MainActivity.class);
                 startActivity(intent);
+            }
+        });
+    }
+
+    public void addListenerSignupButton() {
+        ImageView signup = (ImageView) findViewById(R.id.sign_up_button);
+
+        signup.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View arg0){
+                Uri uriUrl = Uri.parse("https://www.coolfaces.net/toocoolpuwl/ECItemCatalog/Item.aspx?Item=9NHjYBKh6m0%3d");
+                Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+                startActivity(launchBrowser);
             }
         });
     }
