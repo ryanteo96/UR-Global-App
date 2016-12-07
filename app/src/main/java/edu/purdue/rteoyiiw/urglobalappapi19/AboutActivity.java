@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 public class AboutActivity extends AppCompatActivity
@@ -35,16 +36,8 @@ public class AboutActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         addListenerBannerButton();
-    }
-
-    public void goToFacebook (View view) {
-        goToUrl("https://www.facebook.com/URGlobal/");
-    }
-
-    private void goToUrl (String url) {
-        Uri uriUrl = Uri.parse(url);
-        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
-        startActivity(launchBrowser);
+        addListenerFacebookButton();
+        addListenerPeerEducatorButton();
     }
 
     @Override
@@ -118,6 +111,33 @@ public class AboutActivity extends AppCompatActivity
             public void onClick(View arg0) {
                 Intent intent = new Intent(AboutActivity.this, MainActivity.class);
                 startActivity(intent);
+            }
+        });
+    }
+    public void addListenerFacebookButton() {
+        ImageView signup = (ImageView) findViewById(R.id.facebook);
+
+        signup.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View arg0){
+                Uri uriUrl = Uri.parse("https://www.facebook.com/URGlobal/");
+                Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+                startActivity(launchBrowser);
+            }
+        });
+    }
+
+    public void addListenerPeerEducatorButton() {
+        ImageView signup = (ImageView) findViewById(R.id.sign_up_button);
+
+        signup.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View arg0){
+                Uri uriUrl = Uri.parse("https://purdue.qualtrics.com/SE/?SID=SV_86q6QLact0g4Hjv");
+                Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+                startActivity(launchBrowser);
             }
         });
     }
