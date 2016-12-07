@@ -27,12 +27,22 @@
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="155dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/content_main_layout">
+
+            <Button
+                android:background="@drawable/about_button_background"
+                android:id="@+id/aboutButton"
+                android:layout_width="350dp"
+                android:layout_height="150dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignLeft="@+id/eventButton"
+                android:layout_alignStart="@+id/eventButton" />
 
             <Button
                 android:background="@drawable/event_button_background"
@@ -60,16 +70,6 @@
                 android:layout_below="@+id/regiButton"
                 android:layout_marginTop="20dp"
                 android:layout_centerHorizontal="true" />
-
-            <Button
-                android:background="@drawable/about_button_background"
-                android:layout_marginTop="181dp"
-                android:id="@+id/aboutButton"
-                android:layout_width="350dp"
-                android:layout_height="150dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignLeft="@+id/eventButton"
-                android:layout_alignStart="@+id/eventButton" />
 
         </RelativeLayout>
     </ScrollView>
