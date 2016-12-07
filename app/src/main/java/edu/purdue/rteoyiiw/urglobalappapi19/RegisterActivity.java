@@ -33,6 +33,7 @@ public class RegisterActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
         addListenerBannerButton();
         addListenerRegisterEventButton();
         addListenerRegisterPeerButton();
@@ -84,6 +85,14 @@ public class RegisterActivity extends AppCompatActivity
         }else if(id == R.id.event) {
             Intent intent = new Intent(RegisterActivity.this, EventActivity.class);
             startActivity(intent);
+        }else if(id == R.id.home) {
+            Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+            startActivity(intent);
+        }else if (id == R.id.regi) {
+            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            if (drawer.isDrawerOpen(GravityCompat.START)) {
+                drawer.closeDrawer(GravityCompat.START);
+            }
         }
 
 

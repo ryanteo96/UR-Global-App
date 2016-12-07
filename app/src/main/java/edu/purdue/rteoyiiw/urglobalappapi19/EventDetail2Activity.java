@@ -35,6 +35,7 @@ public class EventDetail2Activity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
         addListenerBannerButton();
         addListenerSignupButton();
     }
@@ -86,6 +87,9 @@ public class EventDetail2Activity extends AppCompatActivity
             startActivity(intent);
         }else if(id == R.id.regi) {
             Intent intent = new Intent(EventDetail2Activity.this, RegisterActivity.class);
+            startActivity(intent);
+        }else if(id == R.id.home) {
+            Intent intent = new Intent(EventDetail2Activity.this, MainActivity.class);
             startActivity(intent);
         }
 

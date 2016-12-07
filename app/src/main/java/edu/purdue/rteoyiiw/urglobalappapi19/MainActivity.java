@@ -29,10 +29,6 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        addListenerAboutButton();
-        addListenerEventButton();
-        addListenerNotiDemo();
-        addListenerRegisterButton();
 
        animTranslate = AnimationUtils.loadAnimation(this, R.anim.translate);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -46,7 +42,13 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        addListenerAboutButton();
+        addListenerEventButton();
+        addListenerNotiDemo();
+        addListenerRegisterButton();
         addListenerUpcomingEventLayout();
+        addListenerBannerButton();
     }
 
 
@@ -115,6 +117,11 @@ public class MainActivity extends AppCompatActivity
         }else if(id == R.id.regi) {
             Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
             startActivity(intent);
+        }else if(id == R.id.home) {
+            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            if (drawer.isDrawerOpen(GravityCompat.START)) {
+                drawer.closeDrawer(GravityCompat.START);
+            }
         }
 
 
@@ -187,6 +194,22 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View arg0) {
                 Intent intent = new Intent(MainActivity.this, EventDetail1Activity.class);
                 startActivity(intent);
+            }
+        });
+    }
+
+    public void addListenerBannerButton(){
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        View headerView = navigationView.getHeaderView(0);
+        LinearLayout header = (LinearLayout) headerView.findViewById(R.id.banner_button);
+        header.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View arg0) {
+                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                if (drawer.isDrawerOpen(GravityCompat.START)) {
+                    drawer.closeDrawer(GravityCompat.START);
+                }
             }
         });
     }

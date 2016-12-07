@@ -33,6 +33,7 @@ public class AboutActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
         addListenerBannerButton();
     }
 
@@ -91,6 +92,14 @@ public class AboutActivity extends AppCompatActivity
         } else if(id == R.id.regi) {
             Intent intent = new Intent(AboutActivity.this, RegisterActivity.class);
             startActivity(intent);
+        } else if(id == R.id.home) {
+            Intent intent = new Intent(AboutActivity.this, MainActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.about) {
+            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+            if (drawer.isDrawerOpen(GravityCompat.START)) {
+                drawer.closeDrawer(GravityCompat.START);
+            }
         }
 
 
