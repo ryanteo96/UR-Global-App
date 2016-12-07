@@ -22,10 +22,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <ImageView
-                android:layout_width="372dp"
-                android:layout_height="305dp"
-                android:id="@+id/imageView11" />
+
 
             <TextView
                 android:layout_width="match_parent"

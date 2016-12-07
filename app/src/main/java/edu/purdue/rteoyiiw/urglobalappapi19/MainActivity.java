@@ -17,12 +17,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    Animation animTranslate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity
         addListenerNotiDemo();
         addListenerRegisterButton();
 
+       animTranslate = AnimationUtils.loadAnimation(this, R.anim.translate);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -45,6 +48,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         addListenerUpcomingEventLayout();
     }
+
 
     private void addNotification() {
         NotificationCompat.Builder builder =
@@ -122,15 +126,15 @@ public class MainActivity extends AppCompatActivity
     public void addListenerAboutButton() {
         Button button;
         button = (Button) findViewById(R.id.aboutButton);
-
-        button.setOnClickListener(new View.OnClickListener() {
-
+                button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
                 Intent intent = new Intent(MainActivity.this, AboutActivity.class);
                 startActivity(intent);
+                arg0.startAnimation(animTranslate);
             }
         });
+
     }
 
     public void addListenerEventButton(){
@@ -143,6 +147,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View arg0){
                 Intent intent = new Intent(MainActivity.this, EventActivity.class);
                 startActivity(intent);
+                arg0.startAnimation(animTranslate);
             }
         });
     }
@@ -157,6 +162,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View arg0){
                 Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
                 startActivity(intent);
+                arg0.startAnimation(animTranslate);
             }
         });
     }
