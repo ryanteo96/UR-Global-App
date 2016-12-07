@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@mipmap/event_page_background"
     android:id="@+id/content_event2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -27,7 +28,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/EventTitle2"
+                android:text="@string/event_2_title"
                 android:textStyle="normal|bold"
                 android:textColor="#000000"
                 android:textSize="20sp"
@@ -36,42 +37,42 @@
 
             <TextView
                 android:id="@+id/ggame_description"
-                android:text="@string/Global_desp1"
+                android:text="@string/event_2_description_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"/>
 
             <TextView
                 android:id="@id/ggame_description"
-                android:text="@string/Global_desp2"
+                android:text="@string/event_2_description_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"/>
 
             <TextView
                 android:id="@id/ggame_description"
-                android:text="@string/Global_desp3"
+                android:text="@string/event_2_description_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"/>
 
             <TextView
                 android:id="@id/ggame_description"
-                android:text="@string/Global_desp4"
+                android:text="@string/event_2_description_4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"/>
 
             <TextView
                 android:id="@id/ggame_description"
-                android:text="@string/Global_desp5"
+                android:text="@string/event_2_description_5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"/>
 
             <TextView
                 android:id="@id/ggame_description"
-                android:text="@string/Global_desp6"
+                android:text="@string/event_2_description_6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"/>
@@ -84,10 +85,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"/>
-
-
-
-
 
         </LinearLayout>
     </ScrollView>

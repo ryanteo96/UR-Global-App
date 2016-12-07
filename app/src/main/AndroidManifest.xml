@@ -35,12 +35,12 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".EventDetail1Activity"
-            android:label="Event 1"
+            android:label="Upcoming Events"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".EventDetail2Activity"
-            android:label="Event 2"
+            android:label="Upcoming Events"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

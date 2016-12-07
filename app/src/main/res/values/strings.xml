@@ -36,34 +36,35 @@
 
     <string name="more_info"> For more information, click below and visit our Facebook page</string>
 
-    <string name="EventTitle1">Trip to Six Flags</string>
-    <string name="EventTitle2">UR Global - Global Games</string>
 
-    <string name="description">Saturday, Oct. 29, 2016</string>
-    <string name="description_a">One of the events that student anticipated the most as it is one of the biggest events that UR Global do annually.</string>
-    <string name="description_b">Peer educators gained leadership experience by leading students around the park.</string>
-    <string name="description_c">Everyone had fun and get to know each other better after getting on crazy rides.</string>
-    <string name="description_d">It is only 50$ including transportation, ticket and food! Even cheaper for peer educators!</string>
-    <string name="description_e">AWESOME!</string>
 
-    <string name="Global_desp1">Time: 6th November 17:00\-19:00</string>
-    <string name="Global_desp2">Location: Vawter Media Room in Windsor Hall (entrance opposite Starbucks on 3rd street)</string>
-    <string name="Global_desp3">Hi Students,</string>
-    <string name="Global_desp4">We have our next event this coming Sunday,
+    <string name="event_1_title">UR Global Ski Trip</string>
+    <string name="event_1_description_1">Time: Saturday, Feb. 11, 2017</string>
+    <string name="event_1_description_2">Fee:  $50</string>
+    <string name="event_1_description_3">◦ One of the events that student anticipated the most
+        as it is one of the biggest events that UR Global do annually.</string>
+    <string name="event_1_description_4">◦ Make the most out of winter by learning how to ski. </string>
+    <string name="event_1_description_5">◦ We will be assembling in Meredith Hall at 8am.</string>
+    <string name="event_1_description_6">◦ Food and equipment rental included.</string>
+
+
+
+    <string name="event_2_title">UR Global - Global Games</string>
+    <string name="event_2_description_1">Time: 6th November 17:00-19:00</string>
+    <string name="event_2_description_2">Location: Vawter Media Room in Windsor Hall (entrance opposite Starbucks on 3rd street)</string>
+    <string name="event_2_description_3">Hi Students,</string>
+    <string name="event_2_description_4">We have our next event this coming Sunday,
         Nov 6th from 5-7 pm at the Vawter Media Room in Windsor Hall (entrance opposite Starbucks on 3rd street). </string>
-    <string name="Global_desp5">We will be hosting all of Purdue\'s Cultural centers in the cozy setting of
+    <string name="event_2_description_5">We will be hosting all of Purdue\'s Cultural centers in the cozy setting of
         the Vawter room. We will be playing fun games and there will be food!!</string>
-    <string name="Global_desp6">If you plan on attending, please make sure to confirm here</string>
+    <string name="event_2_description_6">If you plan on attending, please make sure to confirm here</string>
 
     <string name="link">https://purdue.qualtrics.com/jfe/form/SV_b1xC6IkaF7fpQSp</string>
+
     <string name="action_settings">Settings *COMING SOON*</string>
-
     <string name="menu_about">About</string>
-
     <string name="menu_event">Upcoming Events</string>
-
     <string name="notification_demo">Notification Demo</string>
-
     <string name="menu_register">Register</string>
     <string name="title_activity_settings">Settings</string>
 

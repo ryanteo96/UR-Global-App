@@ -114,7 +114,7 @@ public class RegisterActivity extends AppCompatActivity
 
             @Override
             public void onClick(View arg0){
-                Uri uriUrl = Uri.parse("https://purdue.qualtrics.com/jfe/form/SV_0vmpUY9NjfmsXat");
+                Uri uriUrl = Uri.parse("https://purdue.qualtrics.com/jfe/form/SV_6S5jCue5eDgDCRv");
                 Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
                 startActivity(launchBrowser);
             }
