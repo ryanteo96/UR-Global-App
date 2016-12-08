@@ -24,13 +24,13 @@ import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    Animation animTranslate;
+    //Animation animTranslate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       animTranslate = AnimationUtils.loadAnimation(this, R.anim.translate);
+        //animTranslate = AnimationUtils.loadAnimation(this, R.anim.translate);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View arg0) {
                 Intent intent = new Intent(MainActivity.this, AboutActivity.class);
                 startActivity(intent);
-                arg0.startAnimation(animTranslate);
+                //arg0.startAnimation(animTranslate);
             }
         });
 
@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View arg0){
                 Intent intent = new Intent(MainActivity.this, EventActivity.class);
                 startActivity(intent);
-                arg0.startAnimation(animTranslate);
+                //arg0.startAnimation(animTranslate);
             }
         });
     }
@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View arg0){
                 Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
                 startActivity(intent);
-                arg0.startAnimation(animTranslate);
+                //arg0.startAnimation(animTranslate);
             }
         });
     }
